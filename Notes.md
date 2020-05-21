@@ -3,6 +3,6 @@
 # Tooling
 - vim
 - nano
-- tmux
 - grep
 - cat
+- tmux
