@@ -1,5 +1,13 @@
 # Additional Resources
 
+[Exam Details](https://www.cncf.io/certification/ckad)  
+[CNCF curriculum versions](https://github.com/cncf/curriculum)  
+
+
+## Books
+
+- [Kubernetes: Up and Running, 2nd Edition](http://shop.oreilly.com/product/0636920223788.do)
+
 ## Courses and Training
 
 ### Official
@@ -18,3 +26,10 @@
 
 - 
 - 
+
+## Links
+
+https://medium.com/chotot/tips-tricks-to-pass-certified-kubernetes-application-developer-ckad-exam-67c9e1b32e6e
+
+https://github.com/twajr/ckad-prep-notes
+
