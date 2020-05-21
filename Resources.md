@@ -29,7 +29,13 @@
 
 ## Links
 
+CKAD Challenges: 
+https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681
+
+CKA & CKAD Simulator: 
+https://killer.sh/ckad
+
+
 https://medium.com/chotot/tips-tricks-to-pass-certified-kubernetes-application-developer-ckad-exam-67c9e1b32e6e
 
 https://github.com/twajr/ckad-prep-notes
-

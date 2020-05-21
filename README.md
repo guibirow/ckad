@@ -11,9 +11,9 @@ The exam assumes knowledge of, but does not test for, container runtimes and a m
 
 The successful candidate will be comfortable using:
 
-> An OCI-Compliant Container Runtime, such as [Docker](https://www.docker.com/products/container-runtime), [CRI-O](https://cri-o.io/) or [rkt(obsolete)](https://github.com/rkt/rkt/issues/4024) .
-Cloud native application concepts and architectures.
-A programming language, such as Python, Node.js, Go, or Java.
+> An OCI-Compliant Container Runtime, such as [Docker](https://www.docker.com/products/container-runtime), [CRI-O](https://cri-o.io/) or [rkt(obsolete)](https://github.com/rkt/rkt/issues/4024).  
+Cloud native application concepts and architectures.  
+A programming language, such as Python, Node.js, Go, or Java.  
 
 The certification program allows users to demonstrate their competence in a hands-on, command-line environment. The purpose of the Certified Kubernetes Application Developer (CKAD) program is to provide assurance that CKADs have the skills, knowledge, and competency to perform the responsibilities of Kubernetes application developers.
 

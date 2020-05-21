@@ -1,6 +1,19 @@
 https://medium.com/faun/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 
+https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681
 
+
+# Notes
+
+https://medium.com/chotot/tips-tricks-to-pass-certified-kubernetes-application-developer-ckad-exam-67c9e1b32e6e
+
+On the [CKAD exercise(https://github.com/dgkanatsios/CKAD-exercises)], it misses two parts includes network policy and logging architect. But it takes 15% of your score so it’s very important to finish.
+
+- Network policy question: On my exam, this is a troubleshooting problem. The pod cannot access service because of created network policy. So you might describe network policy then the correct label of the pods to fix it. If you understand the network policy, very quickly to finish the problem. Read more the task [Declare Network Policy](https://kubernetes.io/docs/tasks/administer-cluster/declare-network-policy/).
+
+- Logging architecture k8s: You should understand cluster-level-logging. Read [Logging Architecture](https://kubernetes.io/docs/concepts/cluster-administration/logging/), especially [Sidecar container](https://kubernetes.io/docs/concepts/cluster-administration/logging/#sidecar-container-with-a-logging-agent) with a logging agent to understand sidecar container, fluentd.
+
+# OUTDATED scripts
 https://www.youtube.com/watch?v=rnemKrveZks
 ```
 kubectl run nginx --image=nginx   (deployment) deprecated

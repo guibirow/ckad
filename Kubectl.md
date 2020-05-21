@@ -1,5 +1,25 @@
 # Kubectl tips and tricks
 
+## Kubectl 1.18 Changes
+
+`Kubectl 1.18` brought a few breaking changes you should be aware before you continue.
+
+### kubectl run
+`kubectl run` and `kubectl run --generator=deployment/v1beta1` are not valid to create resources other than POD.
+
+From 1.18, only PODs are created using `kubectl run` command.
+
+### --dry-run  
+`--dry-run flag has been deprecated in favor or `--dry-run=client` or `--dry-run=server`.
+
+### exec
+`exec` has been deprecated and will be removed in future versions.
+
+## kubectl Cheat Sheet
+
+The kubernetes cheatsheet contains examples with most of the examples demonstrated here. For more examples, please chech on 
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
 ## YAML generation
 Use the flags `--dry-run=client` or `--dry-run=server` in conjunction with the `--output` (`-o`) flag to generate the output of the command without commiting the changes to k8s api. e.g:
 
@@ -11,16 +31,45 @@ Alternatively, get a resource and output as yaml
 kubectl get pod nginx  --output=yaml --dry-run
 ```
 
+To save some time, you can set it as environment variable and reuse in your commands, like:
 
+```
+export dry="--dry-run=client -o yaml"
+
+
+```
+
+## Undestand resource structure
+Instead of decorate all yaml structure of each resource type, you can output the structure using the explain command like below:
+
+```
+kubectl explain pod.spec --recursive | less
+```
 
 ## Create a Pod
 ```
-kubectl run nginx --image=nginx --expose --port=80 --output=yaml --dry-run
+kubectl run nginx --image=nginx 
+
+kubectl run nginx --image=nginx \
+    --requests "cpu=100m,memory=256Mi" \
+    --limits "cpu=200m,memory=512Mi" 
 ```
 
 ## Create a deployment
 ```
 kubectl create deployment nginx --image=nginx
+
+# set resources, before creation
+$ kubectl create deployment nginx --image=nginx --dry-run -o yaml > deploy.yaml
+$ nano deploy.yaml      # set requests
+$ kubectl apply -f deploy.yaml
+
+
+# set resources, after creation
+kubectl create deployment nginx --image=nginx
+kubectl set resources deployment nginx -c=nginx \
+  --requests=cpu=200m,memory=200Mi \
+  --requests=cpu=200m,memory=200Mi
 ```
 
 ## Create a service
@@ -39,6 +88,15 @@ kubectl expose deployment nginx --port=80 --target-port=80
 From a new pod
 ```
 kubectl run nginx --image=nginx --expose --port=80 --output=yaml --dry-run
+```
+## Create a Job
+
+```
+```
+
+## Create a CronJob
+
+```
 ```
 
 ## Edit a resource
