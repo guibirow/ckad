@@ -1,23 +1,17 @@
 # Tips and Tricks
 
-## Tips
+The following is a few tips and tricks to get ready and make good use of the resources.
 
 ####  Keep track of your time
 The exam will last for 2 hours, it gives you a 6 min per question, some questions represents only 2% or 3% of the total exam score. Avoid spending too much time on low scoring questions, if you get stuck in one of these, skip to the next one and leave these to be completed at the end.
 
-> **Important notice**:  
-> On *kubernetes 1.18*, the flag `--dry-run` and the command `run` has been deprecated.  
-`--dry-run` is still valid on 1.18 but it will generate a warning, the correct way to use it is via `--dry-run=server` or `--dry-run=client`
-`run` command will only generate pods. please check [kubectl tips](Kubectl.md) for more examples.
-
-
-#### Take some exercises before the exam. 
+#### Try some exercises before the exam. 
 
 I've notice experienced people fail the exam on first attempt, people who work with kubernetes on daily basis, mainly because the test covers quite a few different scenarios we don't usually interact with everyday.
 
-People whith over 1 year of experience will likely pass the test withtout much difficulties, you should try some exercises to assert your skills on all areas required by the exam to not be caught by surprise.
+People whith over 1 year of experience will likely pass the test withtout much difficulties, to avoid falling on the same trap, you should try some exercises to review your skills on all areas required by the exam to not be caught by surprise.
 
-If your experienced with kubernetes is short, reading the docs is the best starting point, but it is a tedious and long task and does not point you to right direction, the resources provided here try to give you some directions, you should also try the exercises multiple times and get prepared for the exam.
+If you have a short experience with kubernetes, reading the docs is the best starting point, but it is a tedious and long task and does not point you to right direction, the resources provided here try to give you some directions, you should also try the exercises multiple times and get prepared for the exam.
 
 ####  Do not create yaml files from scratch
 To make best use of your time, you should avoid typing the yaml files by hand, it is a tyme consuming task and there are better way of doing it. 
@@ -30,15 +24,15 @@ kubectl run nginx --image=nginx --dry-run=client -o yaml
 ---
 ## Tools
 
-The following is a list of tools commonly used while working with kubernetes. Knowing the basics of these tools will save you some time during the exam.
+The following is a list of tools you should be familiar when working with kubernetes. Knowing the basics of these tools will save you some time during the exam and also on daily activities.
 
 ---
 ### bash
 
 Bash is the default shell in most linux distros, the VM running the test will have it, making good use of the shell is the first priority for anyone working with kubernetes.
 
-**Alias**:
-aliases are very useful to save time with commands that are done really often, in the exam, you will type the `kubectl` command many times, the command itself is not long, but savind some time is valuable given the short. The command can be aliased to:
+**Alias**:  
+Aliases are very useful to save time with commands that are done really often, in the exam, you will type the `kubectl` command many times, the command itself is not long, but savind some time is valuable given the short. The command can be aliased to:
 
 `alias k=kubectl`
 
@@ -51,12 +45,11 @@ k get pods
 
 **Shortcuts**:
 
-    CTRL + Z    -> Suspend current active program
-    fg          -> Restore last suspended(or fg %2)
+    CTRL + R    -> bash history search
+    CTRL + Z    -> Send active program to background
+    fg          -> Restore suspended program (or fg %2)
     jobs        -> list background jobs
 
-    CTRL + R    -> bash history search
-    
 
 ---
 ### kubectl
