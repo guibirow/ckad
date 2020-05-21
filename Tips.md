@@ -1,6 +1,6 @@
 # Tips and Tricks
 
-The following is a few tips and tricks to get ready and make good use of the resources.
+The following are a few tips and tricks to get ready and make good use your time and tooling available.
 
 ####  Keep track of your time
 The exam will last for 2 hours, it gives you a 6 min per question, some questions represents only 2% or 3% of the total exam score. Avoid spending too much time on low scoring questions, if you get stuck in one of these, skip to the next one and leave these to be completed at the end.
@@ -96,7 +96,7 @@ If *VIM* is too advanced for your, nano might simplify the things, knowing the f
 > `^` represents `CTRL` on Windows and Linux, or `Command` on Mac
 
     ^S  -> Save current file
-    ^X  -> Close buffer, exit from nano
+    ^X  -> Exit from nano
 
 if nano is your default editor, edit the resource using `kubectl edit pod nginx` then make the desired changes, then `CTRL+S CTRL+X` to save, exit and apply the changes.
 
@@ -104,6 +104,23 @@ if nano is your default editor, edit the resource using `kubectl edit pod nginx`
 
 ---
 ### grep
+`grep` is a Linux/UNIX command to search for text PATTERNS in a FILE or INPUT. When a match is found, grep prints to the terminal each line matching the pattern.  
+
+Usage:  
+
+Search for the work *hello* in the file `filename.txt`  
+`grep 'hello' filename.txt`  
+`grep -i 'hello' filename.txt` *(case insensitive)*   
+`grep -R 'hello' .` *(all files on current and subfolders)*  
+`grep -v 'hello' filename.txt` *(lines without hello)*  
+
+`grep -B 4 'hello' filename.txt`  *(include 4 lines before matched line)*   
+`grep -A 4 'hello' filename.txt`    *(include 4 lines after matched line)*   
+
+`cat filename.txt | grep -i 'helo'` *(input from previous command)*  
+
+Example:  
+`kubectl get pods | grep -vi running ` *(show only pods not running containing)*
 
 ---
 ### cat

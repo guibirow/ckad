@@ -2,12 +2,13 @@
 
 ## Kubectl 1.18 Changes
 
-`Kubectl 1.18` brought a few breaking changes you should be aware before you continue.
+`Kubectl 1.18` came with a few breaking changes and deprecation you should be aware to not be caught by surprise during your exam.
 
 ### kubectl run
-`kubectl run` and `kubectl run --generator=deployment/v1beta1` are not valid to create resources other than POD.
 
-From 1.18, only PODs are created using `kubectl run` command.
+From version 1.18, only PODs are created using `kubectl run` command. `kubectl run` and `kubectl run --generator=deployment/v1beta1` are not valid to create deployments, jobs and cronjobs.
+
+
 
 ### --dry-run  
 `--dry-run flag has been deprecated in favor or `--dry-run=client` or `--dry-run=server`.
@@ -31,19 +32,12 @@ Alternatively, get a resource and output as yaml
 kubectl get pod nginx  --output=yaml --dry-run
 ```
 
-To save some time, you can set it as environment variable and reuse in your commands, like:
+
+## Undestand resources structure
+Instead of decorate all yaml structure of each resource type, or searching in the docs the specific attribute you know exist but doesn't remember the exact name, to save you some time, you can output the structure of resource by using the explain command like below:
 
 ```
-export dry="--dry-run=client -o yaml"
-
-
-```
-
-## Undestand resource structure
-Instead of decorate all yaml structure of each resource type, you can output the structure using the explain command like below:
-
-```
-kubectl explain pod.spec --recursive | less
+kubectl explain pods.spec.containers --recursive | less
 ```
 
 ## Create a Pod
