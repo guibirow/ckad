@@ -64,7 +64,7 @@ Yes, you can take notes using the Notepad feature accessible in the top menu bar
 --- 
 #### What score is needed to pass the exam?
 
-For the CKA Exam, a score of 74% or above must be earned to pass.For the CKAD Exam, a score of 66% or above must be earned to pass.
+For the CKAD Exam, a score of 66% or above must be earned to pass. For the CKA Exam, a score of 74% or above must be earned to pass.
 
 ---
 #### How is my exam scored?

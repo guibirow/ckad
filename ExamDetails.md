@@ -1,6 +1,6 @@
 # Exam Details
 
-> This is a collated summary of exam details and tips. Be aware it might become outdated and the official content should be the source of truth.
+> This is a collated summary of exam details and tips. Be aware it might become outdated and the official content should be considered.
 
 The online, proctored, performance-based test consists of a set of performance-based items (problems) to be solved in a command line and is expected to take approximately two (2) hours to complete.
 
@@ -14,52 +14,67 @@ This exam curriculum includes these general domains and their weights on the exa
     13% – Services & Networking
     8% – State Persistence
 
-You can take the CKA exam and the CKAD exam from any qualifying computer, anywhere thereis internet, almost any time. No need to go to a test center. 
+You can take the CKA exam and the CKAD exam from any qualifying computer, anywhere there is internet, almost any time. No need to go to a test center. 
 
-The online exams consist of a set of performance-based tasks (problems) to be solved on thecommand line. CKA exam consists of 24 tasks, CKAD exam consists of 19 tasks.
+The online exams consist of a set of performance-based tasks (problems) to be solved on the command line. **CKAD exam consists of 19 tasks**. CKA exam consists of 24 tasks. 
 
-The CKA exam is expected to take 3 hours to complete. The CKAD exam is expected to take 2hours to complete.
+The CKAD exam is expected to take 2 hours to complete.
+The CKA exam is expected to take 3 hours to complete. 
 
 Candidates are required to provide a non-expired Primary ID that contains Candidate’s photograph, signature and full name (see examples of acceptable forms of ID in the table below).
 
 If the Candidate’s full name on their Primary ID contains non-latin characters, then the Candidatemust ALSO provide a non-expired Secondary ID containing their full name in Latin Charactersand signature, OR a notarized English translation of their Primary ID along with the non-latincharacter Primary ID
 
+---
 ## Exam Results
 
 Results will be emailed 36 hours from the time that the exam was completed.
 
 Results will also be made available on My Portal
 
-# Exam Environment
+---
+## Exam Environment
 
-- Each task on this exam must be completed on a designated cluster/configuration context.
-- To minimize switching, the tasks are grouped so that all questions on a given cluster appearconsecutively.
-- There are four clusters for (CKAD) that comprise the exam environment, madeup of varying numbers of containers, as follows:
+Each task on this exam must be completed on a designated cluster/configuration context.
 
-    **CKAD Clusters**
+To minimize switching, the tasks are grouped so that all questions on a given cluster appearconsecutively.
 
-    Cluster | Members | CNI | Description 
-    ------- | ------- | --- | -----------
-    k8s  | 1 master, 2 workers | flannel | k8s cluster
-    dk8s | 1 master, 1 workers | flannel | k8s cluster
-    nk8s | 1 master, 2 workers | calico  | k8s cluster
-    sk8s | 1 master, 1 workers | flannel | k8s cluster
+There are four clusters for (CKAD) that comprise the exam environment, madeup of varying numbers of containers, as follows:
 
+**CKAD Clusters**
 
-- The CKA & CKAD environments are currently running **Kubernetes v​1.18**. (Quarterly exam updates are planned to match Kubernetes releases.)
-- At the start of each task you'll be provided with the command to ensure you are on the correctcluster to complete the task
-- Nodes making up each cluster can be reached via​ ssh​, using a command such as the following: `ssh <nodename>`
-- You can assume elevated privileges on any node by issuing the following command: `​sudo -i`
-- You can also use `​sudo`​ to execute commands with elevated privileges at any time
-- You must return to the base node (hostname ​`node-1​`) after completing each task.
-- Nested​ `−ssh` is not supported
-- You can use `​kubectl` ​and the appropriate context to work on any cluster from the base node.When connected to a cluster member via ​`ssh`​, you will only be able to work on that particularcluster via ​kubectl.
-- Further instructions for connecting to cluster nodes will be provided in the appropriate tasks
-- Where no explicit namespace is specified, the default namespace should be acted upon.
-- If you need to destroy/recreate a resource to perform a certain task, it is your responsibility toback up the resource definition appropriately prior to destroying the resource.
+Cluster | Members | CNI | Description 
+------- | ------- | --- | -----------
+k8s  | 1 master, 2 workers | flannel | k8s cluster
+dk8s | 1 master, 1 workers | flannel | k8s cluster
+nk8s | 1 master, 2 workers | calico  | k8s cluster
+sk8s | 1 master, 1 workers | flannel | k8s cluster
 
 
-# Technical Instructions
+The CKA & CKAD environments are currently running **Kubernetes v​1.18**. (Quarterly exam updates are planned to match Kubernetes releases.)
+
+At the start of each task you'll be provided with the command to ensure you are on the correctcluster to complete the task
+
+Nodes making up each cluster can be reached via​ ssh​, using a command such as the following: `ssh <nodename>`
+
+You can assume elevated privileges on any node by issuing the following command: `​sudo -i`
+
+You can also use `​sudo`​ to execute commands with elevated privileges at any time
+
+You must return to the base node (hostname ​`node-1​`) after completing each task.
+
+Nested​ `−ssh` is not supported
+
+You can use `​kubectl` ​and the appropriate context to work on any cluster from the base node.When connected to a cluster member via ​`ssh`​, you will only be able to work on that particularcluster via ​kubectl.
+
+Further instructions for connecting to cluster nodes will be provided in the appropriate tasks
+
+Where no explicit namespace is specified, the default namespace should be acted upon.
+
+If you need to destroy/recreate a resource to perform a certain task, it is your responsibility toback up the resource definition appropriately prior to destroying the resource.
+
+---
+## Technical Instructions
 
 You may access these instructions at any time while taking the exam by typing `man lf_exam`.
 
