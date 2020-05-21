@@ -3,7 +3,7 @@ https://medium.com/faun/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 
 https://www.youtube.com/watch?v=rnemKrveZks
 ```
-kubectl run nginx --image=nginx   (deployment)
+kubectl run nginx --image=nginx   (deployment) deprecated
 
 kubectl run nginx --image=nginx --restart=Never   (pod)
 

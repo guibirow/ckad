@@ -12,7 +12,12 @@ The first is using the cli `kubectl` with the flags `--dry-run -o yaml` to gener
 ```
 kubectl run nginx --image=nginx --dry-run=client -o yaml
 ```
-> Since *kubernetes 1.18*, the flag `--dry-run` has been deprecated, using it without a parameter will generate a warning, but it is still valid on 1.18, the correct way to use it via `--dry-run=server` or `--dry-run=client`
+
+> **Important notice**:  
+> On *kubernetes 1.18*, the flag `--dry-run` and the command `run` has been deprecated.  
+`--dry-run` is still valid on 1.18 but it will generate a warning, the correct way to use it is via `--dry-run=server` or `--dry-run=client`
+`run` command will only generate pods. please check [kubectl tips](Kubectl.md) for more examples.
+
 
 #### Take some exercises before the exam. 
 
@@ -54,17 +59,18 @@ k get pods
 ---
 #### kubectl
 
-kubectl is the cli to interact with Kubernetes api. This is the tool you must master to pass the test. 
+kubectl is the cli used to interact with Kubernetes api. This is the tool you must master to pass the test without pressure. 
 
 Make sure you are using the cli based on same version of your exam. To get the cli version use the following command: `kubectl version`
 
-In case you don't want to use the defaul editor while modifying resources e.g. `kubectl edit pod nginx`. You can change the default editor by changing the environemnt variable `KUBE_EDITOR`:
+In case you don't want to use the defaul editor while modifying resources e.g. `kubectl edit pod nginx`. You can change the default editor by changing the environment variable `KUBE_EDITOR`:
 
 ``` 
 export KUBE_EDITOR=nano 
 kubectl edit pod nginx      <-- Will open nano as defaul editor
 ```
 
+[More Kubectl commands](Kubectl.md)
 
 ---
 #### vim

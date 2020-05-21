@@ -1,4 +1,4 @@
-# CKAD Exam preparation
+# CKAD Exam Preparation
 
 > This is a set of resources for CKAD exam prep, collated from official and non-official sources. 
 > The official [Exam Details](https://www.cncf.io/certification/ckad) provided by linux foundation should be used if you want the most up to date contents, guidance and policies. Some of the official resource provided in here are meant to facilitate the access to the details and reading the official documents are recomended.
@@ -11,9 +11,9 @@ The exam assumes knowledge of, but does not test for, container runtimes and a m
 
 The successful candidate will be comfortable using:
 
-    An OCI-Compliant Container Runtime, such as Docker or rkt(obsolete).
-    Cloud native application concepts and architectures.
-    A programming language, such as Python, Node.js, Go, or Java.
+> An OCI-Compliant Container Runtime, such as [Docker](https://www.docker.com/products/container-runtime), [CRI-O](https://cri-o.io/) or [rkt(obsolete)](https://github.com/rkt/rkt/issues/4024) .
+Cloud native application concepts and architectures.
+A programming language, such as Python, Node.js, Go, or Java.
 
 The certification program allows users to demonstrate their competence in a hands-on, command-line environment. The purpose of the Certified Kubernetes Application Developer (CKAD) program is to provide assurance that CKADs have the skills, knowledge, and competency to perform the responsibilities of Kubernetes application developers.
 
