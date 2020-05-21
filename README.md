@@ -21,7 +21,7 @@ The certification program allows users to demonstrate their competence in a hand
 
 [Exam Details](ExamDetails.md): A summary of information to get familiar with the exam.
 
-[Execises](exercises/README.md): A set of exercises to prepare for the topics being tested.
+[Exercises](exercises/README.md): A set of exercises to prepare for the topics being tested.
 
 [Tips & Tricks](Tips.md): Tips and Tricks to make best use if your time during the exam.
 
