@@ -1,6 +1,6 @@
 # Kubectl tips and tricks
 
-## Alias
+## Aliases
 
 `alias k=kubectl`  
 `alias kns="kubectl config set-context --current --namespace "`  
@@ -38,6 +38,20 @@ Alternatively, get a resource and output as yaml
 kubectl get pod nginx  --output=yaml --dry-run
 ```
 
+## Finding Issues
+
+Sometime you need to investigate failing pods to identify why it is failing. Without being familiar with the applicaiton and cluster structure, you end up wasting time to find the pod on the right namespace.
+
+When a pod is failing, it's status won't be shown as 'Running', so is much easier to go straigt to the point if you find it in one simple command. 
+
+Using the command below, will output all pods from all namespaces in your cluster.
+
+`kubectl get pod -A -o wide`
+
+If the problem is not in the pod, you possibly need to find other resources by using:
+
+`kubectl get all -A`
+
 
 ## Undestand resources structure
 Instead of decorate all yaml structure of each resource type, or searching in the docs the specific attribute you know exist but doesn't remember the exact name, to save you some time, you can output the structure of resource by using the explain command like below:
@@ -45,6 +59,9 @@ Instead of decorate all yaml structure of each resource type, or searching in th
 ```
 kubectl explain pods.spec.containers --recursive | less
 ```
+
+In case there is a big structure to be typed, prefer copying from the docs instead of typing bit by bit, finding typos in a misaligned yaml will consume a bit of your precious time.
+
 
 ## Create a Pod
 ```
@@ -120,14 +137,14 @@ kubectl run nginx --image=nginx --expose --port=80
     # Print result (in yaml format) of updating nginx container image from local file, without hitting the server
     kubectl set image -f path/to/file.yaml nginx=nginx:1.9.1 --local -o yaml
 
-Editable Resources:
+Editable attributes:
 
-    env            Update environment variables on a pod template
-    image          Update image of a pod template
-    resources      Update resource requests/limits on objects with pod templates
-    selector       Set the selector on a resource
-    serviceaccount Update ServiceAccount of a resource
-    subject        Update User, Group or ServiceAccount in a RoleBinding/ClusterRoleBinding
+    env            # Update environment variables on a pod template
+    image          # Update image of a pod template
+    resources      # Update resource requests/limits on objects with pod templates
+    selector       # Set the selector on a resource
+    serviceaccount # Update ServiceAccount of a resource
+    subject        # Update User, Group or ServiceAccount in a RoleBinding/ClusterRoleBinding
 
 ## Commands
 
