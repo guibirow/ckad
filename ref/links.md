@@ -3,6 +3,11 @@ https://medium.com/faun/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681
 
 
+https://www.katacoda.com/ckad-prep/scenarios/first-steps
+https://www.katacoda.com/fabito/scenarios/ckad
+
+
+
 # Notes
 
 https://medium.com/chotot/tips-tricks-to-pass-certified-kubernetes-application-developer-ckad-exam-67c9e1b32e6e
