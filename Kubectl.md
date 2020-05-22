@@ -1,5 +1,11 @@
 # Kubectl tips and tricks
 
+## Alias
+
+`alias k=kubectl`  
+`alias kns="kubectl config set-context --current --namespace "`  
+`alias kall='kubectl get all -o wide'`
+
 ## Kubectl 1.18 Changes
 
 `Kubectl 1.18` came with a few breaking changes and deprecation you should be aware to not be caught by surprise during your exam.
@@ -81,7 +87,7 @@ kubectl expose deployment nginx --port=80 --target-port=80
 ```
 From a new pod
 ```
-kubectl run nginx --image=nginx --expose --port=80 --output=yaml --dry-run
+kubectl run nginx --image=nginx --expose --port=80
 ```
 ## Create a Job
 

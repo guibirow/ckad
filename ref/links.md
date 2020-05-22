@@ -1,12 +1,11 @@
 https://medium.com/faun/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443
 
+https://codeburst.io/the-ckad-browser-terminal-10fab2e8122e
 https://codeburst.io/kubernetes-ckad-weekly-challenges-overview-and-tips-7282b36a2681
 
 
 https://www.katacoda.com/ckad-prep/scenarios/first-steps
 https://www.katacoda.com/fabito/scenarios/ckad
-
-
 
 # Notes
 
@@ -21,6 +20,21 @@ On the [CKAD exercise(https://github.com/dgkanatsios/CKAD-exercises)], it misses
 # OUTDATED scripts
 https://www.youtube.com/watch?v=rnemKrveZks
 ```
+
+kubectl run nginx -image=nginx --restart=Never --port=80 --namespace=myname --command --serviceaccount=mysa1 --env=HOSTNAME=local --labels=bu=finance,env=dev  --requests='cpu=100m,memory=256Mi' --limits='cpu=200m,memory=512Mi' --dry-run -o yaml - /bin/sh -c 'echo hello world'
+
+
+kubectl expose deployment frontend --type=NodePort --name=frontend-service --port=6262 --target-port=8080
+
+kubectl set serviceaccount deployment frontend myuser
+
+kubectl create service clusterip my-cs --tcp=5678:8080 --dry-run -o yaml
+
+
+#######################################
+### THE BELOW SNIPPETS ARE OUTDATED ###
+#######################################
+
 kubectl run nginx --image=nginx   (deployment) deprecated
 
 kubectl run nginx --image=nginx --restart=Never   (pod)
@@ -29,19 +43,7 @@ kubectl run nginx --image=nginx --restart=OnFailure   (job)
 
 kubectl run nginx --image=nginx  --restart=OnFailure --schedule="* * * * *" (cronJob)
 
-
-
-kubectl run nginx -image=nginx --restart=Never --port=80 --namespace=myname --command --serviceaccount=mysa1 --env=HOSTNAME=local --labels=bu=finance,env=dev  --requests='cpu=100m,memory=256Mi' --limits='cpu=200m,memory=512Mi' --dry-run -o yaml - /bin/sh -c 'echo hello world'
-
-
-
 kubectl run frontend --replicas=2 --labels=run=load-balancer-example --image=busybox  --port=8080
-
-kubectl expose deployment frontend --type=NodePort --name=frontend-service --port=6262 --target-port=8080
-
-kubectl set serviceaccount deployment frontend myuser
-
-kubectl create service clusterip my-cs --tcp=5678:8080 --dry-run -o yaml
 
 
 Unix bash on-liners: 

@@ -72,6 +72,13 @@ kubectl edit pod nginx      <-- Will open nano as defaul editor
 
 Vim is powerfull text editor used by defaul when editing resources via command `kubectl edit`. Knowing how to leave it(`:q!`) and save the changes(`:wq`) is the first thing you should know.
 
+Setup
+
+    vi ~/.vimrc 
+    # then add these two lines to the file
+    set tabstop=2
+    set expandtab   # use spaces for tabs
+    
 In case you already know the basics, the following shortcuts will help you save some time:
 
     Mode switch
@@ -85,6 +92,7 @@ In case you already know the basics, the following shortcuts will help you save 
         ZZ          -> Save and exit
         dd          -> Delete current line
         dG          -> Deletes contents from cursor positio to end of file
+
 
 [vim cheatsheet](https://devhints.io/vim) will give you all shortcuts needed if you want to go beyond the basics.
 
@@ -182,3 +190,23 @@ tmux is a terminal multiplexer. It lets you switch easily between several progra
         UP, DOWN-> Switch pane
 
 [tmux cheatsheet](https://gist.github.com/MohamedAlaa/2961058)
+
+---
+### Cron Syntax
+
+`* * * * * command to execute`
+
+```
+ ┌───────────── minute (0 - 59)
+ │ ┌───────────── hour (0 - 23)
+ │ │ ┌───────────── day of the month (1 - 31)
+ │ │ │ ┌───────────── month (1 - 12)
+ │ │ │ │ ┌───────────── day of the week (0 - 6) 
+ │ │ │ │ │                                   
+ │ │ │ │ │
+ │ │ │ │ │
+ * * * * * command to execute
+```
+>  day of the week (0 - 6) (Sunday to Saturday; 7 is also  Sunday on some systems) 
+
+Source: https://en.wikipedia.org/wiki/Cron
